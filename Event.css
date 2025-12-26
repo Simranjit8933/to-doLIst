@@ -1,0 +1,137 @@
+/* Import a custom font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif; /* Use Poppins font */
+    background: linear-gradient(135deg, #3e97e5, #e6e6fa); /* Soft gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height */
+    margin: 0;
+    color: #333;
+    overflow: hidden; /* Prevent scrollbar if not needed */
+}
+
+/* Main container for the app */
+.todo-container {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Stronger, softer shadow */
+    width: 100%;
+    max-width: 450px; /* Max width for the card */
+    text-align: center;
+    animation: fadeIn 0.8s ease-out; /* Simple fade-in animation */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    color: #d24bd7b1;
+    margin-bottom: 25px;
+    font-weight: 600; /* Bolder for titles */
+    letter-spacing: 0.5px;
+}
+
+/* Input and Button Group */
+.input-group {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+input[type="text"] {
+    flex-grow: 1; /* Allows input to take up available space */
+    padding: 12px 15px;
+    border: 2px solid #a8c0ff; /* Light blue border */
+    border-radius: 8px;
+    margin-right: 10px;
+    font-size: 16px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08); /* Inner shadow */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #7b9fe0; /* Darker blue on focus */
+    box-shadow: 0 0 0 3px rgba(123, 159, 224, 0.3); /* Focus ring */
+}
+
+/* Add Task Button */
+.add-task-btn { /* Changed selector for clarity */
+    padding: 12px 20px;
+    background: linear-gradient(45deg, #7b9fe0, #a8c0ff); /* Gradient button */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(123, 159, 224, 0.3);
+}
+
+.add-task-btn:hover {
+    background: linear-gradient(45deg, #6a8cd2, #94aee9);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(123, 159, 224, 0.4);
+}
+
+.add-task-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(123, 159, 224, 0.2);
+}
+
+/* List Styles */
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: left; /* Align text within list items */
+}
+
+li {
+    background-color: #f9f9f9;
+    padding: 15px 20px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    transition: all 0.3s ease;
+    color: #555;
+    font-size: 17px;
+}
+
+li:hover {
+    transform: translateX(5px); /* Slight slide on hover */
+    background-color: #f0f0f0;
+}
+
+/* Delete Button */
+.delete {
+    background: linear-gradient(45deg, #ff6b6b, #ff8e8e); /* Red gradient */
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(255, 107, 107, 0.3);
+}
+
+.delete:hover {
+    background: linear-gradient(45deg, #e05c5c, #e07a7a);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(255, 107, 107, 0.4);
+}
+
+.delete:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(255, 107, 107, 0.2);
+}
